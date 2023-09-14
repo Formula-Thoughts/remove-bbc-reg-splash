@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Zephr Splash from BBC",
+  "version": "1.0",
+  "description": "Removes the splash screen on BBC;continue reading with interruption. **Refresh page if splash showing**",
+  "author": "services+developer@formulathoughts.com",
+  "icons": {
+    "16": "zap.png",
+    "48": "zap.png",
+    "128": "zap.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "js": ["content.js"],
+      "matches": ["https://www.bbc.com/*", "https://www.bbc.co.uk/*"]
+    }
+  ]
+}
